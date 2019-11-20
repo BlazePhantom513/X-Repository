@@ -1,0 +1,12 @@
+import pandas as pd
+
+file_name_input = "C:\\Users\\ajimmy\\Desktop\\M20 checks.xlsx"
+file_name_output = "C:\\Users\\ajimmy\\Desktop\\M20 Appended.xlsx"
+file = pd.read_excel(io = file_name_input,sheet_name= None)
+with pd.ExcelWriter(file_name_output) as writer:
+    for sheet_names in file.keys():
+       print("Begin appending sheet:",sheet_names,'\n')
+       file[sheet_names].insert(column='Sheet Name',value = sheet_names,loc= 1)
+       file[sheet_names].to_excel(writer, sheet_name = sheet_names)
+       print("Done appending sheet:", sheet_names, '\n')
+    print("Done appending workbook")
