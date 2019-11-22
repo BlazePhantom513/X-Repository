@@ -1,7 +1,7 @@
 import pandas as pd
 
-file_name_input = "C:\\Users\\ajimmy\\Desktop\\M20 checks.xlsx"
-file_name_output = "C:\\Users\\ajimmy\\Desktop\\M20 Appended.xlsx"
+file_name_input = #filepath_Input
+file_name_output = #filepath_Output
 file = pd.read_excel(io = file_name_input,sheet_name= None)
 with pd.ExcelWriter(file_name_output) as writer:
     for sheet_names in file.keys():
