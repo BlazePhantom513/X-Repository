@@ -1,0 +1,12 @@
+def factorial_recursive(number):
+    if number == 1:
+        return 1
+    else:
+        factorial = number * fact(number - 1)
+        return factorial
+
+def factorial_iterative(number):
+    factorial=1
+    for number in range(number,1,-1):
+        factorial *=number
+    return factorial
