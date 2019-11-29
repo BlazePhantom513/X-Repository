@@ -2,7 +2,7 @@ def factorial_recursive(number):
     if number == 1:
         return 1
     else:
-        factorial = number * fact(number - 1)
+        factorial = number * factorial_recursive(number - 1)
         return factorial
 
 def factorial_iterative(number):
